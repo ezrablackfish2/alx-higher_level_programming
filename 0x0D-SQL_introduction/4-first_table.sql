@@ -1,2 +1,2 @@
 -- create a first table
-CREATE first_table WHERE id = INT, name = VARCHAR; 
+CREATE TABLE IF NOT EXISTS `first_table` (`id` INT, `name` VARCHAR(256));
