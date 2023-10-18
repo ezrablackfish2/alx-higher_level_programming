@@ -1,4 +1,4 @@
---joining two tables cities and states
+-- joining two tables cities and states
 SELECT cities.id, cities.name, states.name
 FROM states
 INNER JOIN cities
