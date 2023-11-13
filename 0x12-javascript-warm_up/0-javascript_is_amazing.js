@@ -1,3 +1,3 @@
 #!/usr/bin/node
-let ezra = "JavaScript is amaing";
-console.log(ezra)
+const ezra = 'JavaScript is amaing';
+console.log(ezra);
