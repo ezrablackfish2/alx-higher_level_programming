@@ -1,58 +1,32 @@
 #!/usr/bin/node
-
 class Rectangle {
-	constructor(w, h) {
-		this.width = w;
-		this.height = h;
-	}
+  constructor (w, h) {
+    if ((w > 0) && (h > 0)) {
+      this.width = w;
+      this.height = h;
+    }
+  }
 
-	print() {
-		let h = this.height;
-		while (h) {
-			let w = this.width;
-			let str = '';
-			while (w) {
-				str += 'X';
-				w -= 1;
-			}
-			console.log(str);
-			h -= 1;
-		}
-	}
-	double() {
-//                this.height *= 2;
-                this.width *= 2;
-		let h = this.height;
-                while (h) {
-			
-			let w = this.width;
-                        let str = '';
-                        while (w) {
-                                str += 'X';
-                                w -= 1;
-                        }
-                        console.log(str);
-                        h -= 1;
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      let s = '';
+      for (let j = 0; j < this.width; j++) {
+        s += 'X';
+      }
+      console.log(s);
+    }
+  }
 
-	}
-	}
-        rotate() {
-		let tmp = this.width;
-		this.width = 2 * this.height;
-		this.height = tmp / 2;
-                let h = this.height;
-                while (h) {
-                        let w = this.width;
-                        let str = '';
-                        while (w) {
-                                str += 'X';
-                                w -= 1;
-                        }
-                        console.log(str);
-                        h -= 1;
-                }
-        }
+  rotate () {
+    const aux = this.width;
+    this.width = this.height;
+    this.height = aux;
+  }
 
+  double () {
+    this.width *= 2;
+    this.height *= 2;
+  }
 }
 
 module.exports = Rectangle;
