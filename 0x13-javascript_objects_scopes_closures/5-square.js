@@ -1,15 +1,15 @@
 #!/usr/bin/node
 
 class Rectangle {
-	constructor (w) {
-		this.width = w;
+	constructor (size) {
+		this.size = size;
 	}
 
 	print() {
-		let h = this.width;
+		let h = this.size;
 		while (h) {
 
-		let w = this.width;
+		let w = this.size;
 		let str = '';
 		while (w) {
 			str += 'X';
@@ -21,7 +21,7 @@ class Rectangle {
 	}
 
 	double() {
-		this.width *= 2;
+		this.size *= 2;
 	}
 }
 
