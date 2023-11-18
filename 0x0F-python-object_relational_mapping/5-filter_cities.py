@@ -8,7 +8,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur .execute("SELECT cities.name FROM cities INNER JOIN states ON states.id = cities.state_id WHERE states.name LIKE '{}'".format(sys.argv[4]))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
     cur.close()
     db.close()
