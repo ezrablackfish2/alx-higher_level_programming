@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" wow """
 
 import sys
 from model_state import Base, State
