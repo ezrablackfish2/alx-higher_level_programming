@@ -2,6 +2,8 @@
 """ peak finder """
 
 def find_peak(list_of_integers):
+    """ peak finder fucntion"""
+
     i = 0
     maxim = None
     l = len(list_of_integers) - 1
